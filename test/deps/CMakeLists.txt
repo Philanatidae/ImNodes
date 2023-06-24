@@ -55,6 +55,12 @@ add_library(imgui STATIC
     imgui/imgui_tables.cpp
     imgui/imgui_widgets.cpp
     imgui/misc/cpp/imgui_stdlib.cpp
+
+    imgui/backends/imgui_impl_glfw.cpp
+    imgui/backends/imgui_impl_opengl3.cpp
+)
+target_link_libraries(imgui PUBLIC
+    glfw
 )
 target_include_directories(imgui SYSTEM PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/imgui>)
 target_include_directories(imgui SYSTEM PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/imgui/misc/cpp>)
