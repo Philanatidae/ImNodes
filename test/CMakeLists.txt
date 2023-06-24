@@ -17,7 +17,7 @@ add_library(imnodes STATIC
     ../ImNodesEz.cpp
 )
 target_link_libraries(imnodes PUBLIC imgui)
-target_include_directories(imnodes SYSTEM PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
+target_include_directories(imnodes SYSTEM PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>)
 
 add_executable(main
     src/main.cpp
